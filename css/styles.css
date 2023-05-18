@@ -33,28 +33,28 @@ body {
   flex: 1 1 auto;
 }
 
-.slider_wrapper {
+.slider__wrapper {
   display: flex;
 }
 
-.slider_slide {
+.slider__slide {
   flex-shrink: 0;
 }
 
-.slide_body {
+.slide__body {
   width: 60vh;
   margin: 0 auto;
   max-width: 90vw;
   box-shadow: 0 0 875rem rgba(0, 0, 0, 0.5);
 }
 
-.slide_image {
+.slide__image {
   padding-bottom: 120%;
   position: relative;
   cursor: pointer;
 }
 
-.slide_picture {
+.slide__picture {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -63,7 +63,7 @@ body {
   object-fit: cover;
 }
 
-.slider_scrollbar {
+.slider__scrollbar {
   position: absolute;
   width: 100%;
   height: 0.3125rem;
@@ -72,13 +72,13 @@ body {
   opacity: 0.5;
 }
 
-.slider_scrollbar:hover,
-.slider_scrollbar:active {
+.slider__scrollbar:hover,
+.slider__scrollbar:active {
   opacity: 0.8;
   height: 0.9375rem;
 }
 
-.slider_scrollbar .swiper-scrollbar-drag {
+.slider__scrollbar .swiper-scrollbar-drag {
   opacity: 1;
   cursor: pointer;
   height: 100%;
@@ -98,18 +98,18 @@ body {
   pointer-events: none;
 }
 
-.background_wrapper {
+.background__wrapper {
   min-height: 100%;
   display: flex;
 }
 
-.background_slide {
+.background__slide {
   min-height: 100%;
   flex-shrink: 0;
   position: relative;
 }
 
-.background_image {
+.background__image {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -117,7 +117,7 @@ body {
   left: 0;
 }
 
-.background_image img {
+.background__image img {
   position: absolute;
   top: 0;
   left: 0;
@@ -141,19 +141,19 @@ body {
   pointer-events: none;
 }
 
-.text_wrapper {
+.text__wrapper {
   display: flex;
   position: relative;
   align-items: flex-end;
 }
 
-.text_slide {
+.text__slide {
   position: relative;
   flex-shrink: 0;
   text-align: center;
 }
 
-.text_slide span {
+.text__slide span {
   display: inline-block;
   max-width: 90vw;
   padding: 0.3125rem 0.625rem;
@@ -163,13 +163,13 @@ body {
 }
 
 @media (max-aspect-ratio: 3/2) {
-  .text_slide span {
+  .text__slide span {
     font-size: 3.5vw;
   }
 }
 
 @media (min-width: 991px) {
-  .text_slide span {
+  .text__slide span {
     max-width: 48vw;
   }
 }
