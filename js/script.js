@@ -3,7 +3,7 @@
 let pageSlider = new Swiper(".slider", {
   speed: 1000,
   scrollbar: {
-    el: ".slider_scrollbar",
+    el: ".slider__scrollbar",
     draggable: true,
   },
   breakpoints: {
@@ -19,7 +19,7 @@ let pageSlider = new Swiper(".slider", {
 });
 
 const page = document.querySelector(".page");
-const images = document.querySelectorAll(".slide_picture");
+const images = document.querySelectorAll(".slide__picture");
 
 if (images.length) {
   let backgroundSlides = ``;
@@ -27,32 +27,31 @@ if (images.length) {
 
   images.forEach((image) => {
     backgroundSlides += `
-        <div class="background_slide swiper-slide">
-          <div class="background_image">
-            <img src="${image.getAttribute("src")}" alt="${image.alt}">
-           </div>
+        <div class="background__slide swiper-slide">
+          <div class="background__image">
+              <img src="${image.getAttribute("src")}" alt="${image.alt}">
+          </div>
         </div>`;
     textSlides += `
-      <div class="text_slide swiper-slide">
-        <span>${image.dataset.title ? image.dataset.title : ""}</span>
+      <div class="text__slide swiper-slide">
+          <span>${image.dataset.title ? image.dataset.title : ""}</span>
        </div>
       `;
   });
 
   const background = `
     <div class="background swiper">
-     <div class="background_wrapper swiper-wrapper">
-      ${backgroundSlides}
-      </div>
-     </div>
-    `;
+       <div class="background__wrapper swiper-wrapper">
+         ${backgroundSlides}
+        </div>
+     </div>`;
 
   const text = `
     <div class="text swiper">
-     <div class="text_wrapper swiper-wrapper">
-      ${textSlides}
-      </div>
-     </div>
+       <div class="text__wrapper swiper-wrapper">
+         ${textSlides}
+        </div>
+    </div>
     `;
 
   page.insertAdjacentHTML("afterbegin", background);
@@ -61,7 +60,7 @@ if (images.length) {
   let pageBgSlider = new Swiper(".background", {
     speed: 500,
   });
-  let pegeTextSlider = new Swiper(".text", {
+  let pageTextSlider = new Swiper(".text", {
     effect: "fade",
     fadeEffect: {
       crossFade: true,
@@ -136,7 +135,7 @@ function imageOpen(image) {
     top: ${imagePos.top}px;
     width: ${imagePos.width}px;
     height: ${imagePos.height}px;
-    transition: all ${spedd}ms;
+    transition: all ${speed}ms;
     `;
 
   document.body.append(openImageBlock);
