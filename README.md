@@ -1,2 +1,2 @@
 # Responsive-Gallery
-A nice responsive gallery using swiper. You can use it anywhere.
+A nice responsive gallery. You can use it in your projects.
